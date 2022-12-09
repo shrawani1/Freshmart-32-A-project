@@ -339,7 +339,12 @@ import javax.swing.table.DefaultTableModel;
         
         DBconnection db = new DBconnection();
         int result;
-        String deleteQuery = String.format("delete from manage_seller where seller_id,seller_id,seller_name,password,gender,seller_id");
+        String seller_id =SellerIdTextfield.getText();
+        String seller_name=sellerNameTextfield.getText();     
+        String password=sellerPasswordTextfield.getText();
+        String gender=sellerGenderTextfield.getText(); 
+        
+        String deleteQuery = String.format("delete from manage_seller where seller_id= '%s'",seller_id,seller_name,password,gender,seller_id);
         result= db.execute_command(deleteQuery);
         DefaultTableModel tblModel = (DefaultTableModel)jTable1.getModel();
         if (jTable1.getSelectedRowCount()==1){
@@ -419,9 +424,9 @@ import javax.swing.table.DefaultTableModel;
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         
-//        calender calender2= new calender();
-//        this.setVisible(false);
-//        calender2.setVisible(true);
+        manage_categories mc= new manage_categories();
+        this.setVisible(false);
+        mc.setVisible(true);
         
         
     }//GEN-LAST:event_jButton1ActionPerformed
