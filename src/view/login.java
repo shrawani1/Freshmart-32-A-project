@@ -330,9 +330,9 @@ public class login extends javax.swing.JFrame {
                                         new BillingPoint().setVisible(true);
                                 }
 
-                                if (role == "Admin") {
+                                else if (role == "Admin") {
                                         dispose();
-                                        // new BillingPoint().setVisible(true);
+                                        new product().setVisible(true);
                                 }
                         } else {
                                 // System.out.println("some error occured");
