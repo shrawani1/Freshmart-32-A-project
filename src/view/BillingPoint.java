@@ -491,6 +491,7 @@ public class BillingPoint extends javax.swing.JFrame {
 
                 int productId = 1;
                 int productPrice = 0;
+                int Qty = 0;
                 try {
 
                         Product p1 = new Product(productId, productName, productId, productPrice, productQty);
@@ -498,6 +499,7 @@ public class BillingPoint extends javax.swing.JFrame {
                         ResultSet result = pc.selectDeatils(p1);
                         while (result.next()) {
                                 productPrice = Integer.parseInt(result.getString(1));
+                                Qty = Integer.parseInt(result.getString(2));
 
                         }
                 } catch (Exception e) {
@@ -509,6 +511,12 @@ public class BillingPoint extends javax.swing.JFrame {
                                         JOptionPane.ERROR_MESSAGE);
 
                 } else {
+                        Qty = Qty - Integer.parseInt(productQty);
+
+                        Product p1 = new Product(0, productName, Qty, 0, null);
+                        Product_Controller pc = new Product_Controller();
+                        int result = pc.updateQunatity(p1);
+
                         DefaultTableModel billTableModel = (DefaultTableModel) tbl_Bill.getModel();
                         billTableModel.addRow(new Object[] { productId, productName, productPrice, productQty,
                                         productPrice * Integer.parseInt(productQty) });
