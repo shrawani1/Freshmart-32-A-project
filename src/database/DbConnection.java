@@ -18,7 +18,10 @@ public class DbConnection {
 
         try {
 
-            String username = "freshmart1";
+            //String username = "root";
+             String username = "freshmart1";
+
+            //String password = "@oli#himrajhimal#2025@";
             String password = "Freshmart1";
 
             Class.forName("com.mysql.cj.jdbc.Driver");
