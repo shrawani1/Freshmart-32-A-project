@@ -303,7 +303,7 @@ public class login extends javax.swing.JFrame {
         }// GEN-LAST:event_cbfieldActionPerformed
 
         private void tfuserActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_tfuserActionPerformed
-                // TODO add your handling code here:
+               // // TODO add your handling code here:
         }// GEN-LAST:event_tfuserActionPerformed
 
         private void btnloginActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btnloginActionPerformed
@@ -330,9 +330,9 @@ public class login extends javax.swing.JFrame {
                                         new BillingPoint().setVisible(true);
                                 }
 
-                                if (role == "Admin") {
+                                else if (role == "Admin") {
                                         dispose();
-                                        // new BillingPoint().setVisible(true);
+                                        new product().setVisible(true);
                                 }
                         } else {
                                 // System.out.println("some error occured");
