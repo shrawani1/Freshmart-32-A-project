@@ -237,16 +237,16 @@ public class manage_categories extends javax.swing.JFrame {
 
     private void addBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addBtnActionPerformed
         // TODO add your handling code here:
-//        DBconnection db = new DBconnection();
+        DBconnection db = new DBconnection();
         
         if (snTxt.getText().equals("")||nameTxt.getText().equals("")||descriptionTxt.equals("")){
             JOptionPane.showMessageDialog(this,"Please enter all details");
         
         }else{
         int result;    
-        String insertquery = "insert into manage_categories(category_sn,category_name,category_description)"
+        String insertquery = "insert into manage_category(cat_sn,cat_name,cat_description)"
                 + "values('"+snTxt.getText()+"','"+nameTxt.getText()+"','"+descriptionTxt.getText()+"')"; 
-//        result= db.execute_command(insertquery);
+        result= db.execute_command(insertquery);
         String data[]= {snTxt.getText(),nameTxt.getText(),descriptionTxt.getText()};
                 DefaultTableModel tblModel = (DefaultTableModel)manageCategoriesTable.getModel();
                 tblModel.addRow(data);
@@ -265,7 +265,7 @@ public class manage_categories extends javax.swing.JFrame {
 
     private void deleteBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteBtn1ActionPerformed
         // TODO add your handling code here:
-//        DBconnection db = new DBconnection();
+        DBconnection db = new DBconnection();
         int result;    
         
         String category_sn =snTxt.getText();
@@ -273,8 +273,8 @@ public class manage_categories extends javax.swing.JFrame {
         String category_description=descriptionTxt.getText();
         
         
-        String deleteQuery = String.format("delete from manage_categories where category_sn = '%s'",category_sn,category_name,category_description,category_sn);
-//        result= db.execute_command(deleteQuery);
+        String deleteQuery = String.format("delete from manage_category where cat_sn = '%s'",category_sn,category_name,category_description,category_sn);
+        result= db.execute_command(deleteQuery);
          DefaultTableModel tblModel = (DefaultTableModel)manageCategoriesTable.getModel();
         if (manageCategoriesTable.getSelectedRowCount()==1){
             tblModel.removeRow(manageCategoriesTable.getSelectedRow());
@@ -296,7 +296,7 @@ public class manage_categories extends javax.swing.JFrame {
 
     private void editBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editBtn1ActionPerformed
         // TODO add your handling code here:
-//        DBconnection db = new DBconnection();
+        DBconnection db = new DBconnection();
         int result;    
         
         String category_sn =snTxt.getText();
@@ -304,8 +304,8 @@ public class manage_categories extends javax.swing.JFrame {
         String category_description=descriptionTxt.getText();
         
         
-        String updateQuery = String.format("update manage_categories set category_sn= '%s', category_name= '%s',category_description= '%s' where category_sn = '%s'",category_sn,category_name,category_description,category_sn);
-//        result= db.execute_command(updateQuery);
+        String updateQuery = String.format("update manage_category set  cat_name= '%s',cat_description= '%s' where cat_sn = '%s'",category_name,category_description,category_sn);
+        result= db.execute_command(updateQuery);
         
         DefaultTableModel tblModel = (DefaultTableModel)manageCategoriesTable.getModel();
         
