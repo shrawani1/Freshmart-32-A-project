@@ -1,10 +1,10 @@
 package controller;
 
-import database.DbConnection;
+import database.DBconnection;
 import models.Product;
 
 public class ProductController {
-    DbConnection dbConnection;
+    DBconnection DBconnection;
 
     public int addProduct(Product product) {
         int id = product.getProductId();
@@ -17,10 +17,8 @@ public class ProductController {
                 id,
                 name, qty, price, category);
         System.out.println(addProductQuery);
-        dbConnection = new DbConnection();
-        int result = dbConnection.manipulate(addProductQuery);
+        DBconnection = new DBconnection();
+        int result = DBconnection.execute_command(addProductQuery);
         return result;
     }
 }
-
-
