@@ -4,12 +4,13 @@
  */
 package controller;
 
-import database.DbConnection;
+import database.DBconnection;
+import database.DBconnection;
 import models.Product;
 import java.sql.*;
 
 public class Product_Controller {
-    DbConnection dbConnection;
+    DBconnection DBConnection;
 
     public int addProduct(Product product) {
         int id = product.getProductId();
@@ -22,16 +23,16 @@ public class Product_Controller {
                 id,
                 name, qty, price, category);
         System.out.println(addProductQuery);
-        dbConnection = new DbConnection();
-        int result = dbConnection.manipulate(addProductQuery);
+        DBConnection = new DBconnection();
+        int result = DBConnection.execute_command(addProductQuery);
         return result;
     }
 
     public ResultSet fetchProduct(Product product) {
         String category = product.getProductCategory();
         String selectQuery = "select * from product_table where productCategory='" + category + "'";
-        dbConnection = new DbConnection();
-        ResultSet result = dbConnection.retrieve(selectQuery);
+        DBConnection = new DBconnection();
+        ResultSet result = DBConnection.fetch_data(selectQuery);
         return result;
 
     }
@@ -39,8 +40,8 @@ public class Product_Controller {
     public ResultSet fetchDetails(Product product) {
         String category = product.getProductCategory();
         String selectQuery = "select * from product_table";
-        dbConnection = new DbConnection();
-        ResultSet result = dbConnection.retrieve(selectQuery);
+        DBConnection = new DBconnection();
+        ResultSet result = DBConnection.fetch_data(selectQuery);
         return result;
 
     }
@@ -48,8 +49,8 @@ public class Product_Controller {
     public ResultSet selectDeatils(Product product) {
         String name = product.getProductName();
         String selectQuery = "select productPrice,productQty from product_table where productName='" + name + "'";
-        dbConnection = new DbConnection();
-        ResultSet result = dbConnection.retrieve(selectQuery);
+        DBConnection = new DBconnection();
+        ResultSet result = DBConnection.fetch_data(selectQuery);
         return result;
     }
 
@@ -67,8 +68,8 @@ public class Product_Controller {
                 name, qty, price, category);
 
         System.out.println(updateProductQuery);
-        dbConnection = new DbConnection();
-        int result = dbConnection.manipulate(updateProductQuery);
+        DBConnection = new DBconnection();
+        int result = DBConnection.execute_command(updateProductQuery);
         return result;
     }
 
@@ -92,8 +93,8 @@ public class Product_Controller {
          */
 
         System.out.println(deleteProductQuery);
-        dbConnection = new DbConnection();
-        int result = dbConnection.manipulate(deleteProductQuery);
+        DBConnection = new DBconnection();
+        int result = DBConnection.execute_command(deleteProductQuery);
         return result;
     }
 
@@ -102,8 +103,8 @@ public class Product_Controller {
         int qunatity = product.getProductQty();
 
         String query = "update product_table set productQty='" + qunatity + "' where productName='" + name + "'";
-        dbConnection = new DbConnection();
-        int result = dbConnection.manipulate(query);
+        DBConnection = new DBconnection();
+        int result = DBConnection.execute_command(query);
         return result;
     }
 
