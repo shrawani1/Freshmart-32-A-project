@@ -4,7 +4,7 @@
  */
 package controller;
 
-import database.DBconnection;
+import database.Dbconnection;
 import models.Product;
 
 /**
@@ -12,7 +12,7 @@ import models.Product;
  * @author rajol
  */
 public class ProductDelete {
-        DBconnection DBconnection;
+        Dbconnection DBconnection;
 
         public int deleteProduct(Product product) {
                 int id = product.getProductId();
@@ -34,8 +34,8 @@ public class ProductDelete {
                  */
 
                 System.out.println(deleteProductQuery);
-                DBconnection = new DBconnection();
-                int result = DBconnection.execute_command(deleteProductQuery);
+                DBconnection = new Dbconnection();
+                int result = DBconnection.manipulate(deleteProductQuery);
                 return result;
         }
 }

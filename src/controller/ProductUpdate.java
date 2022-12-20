@@ -4,7 +4,7 @@
  */
 package controller;
 
-import database.DBconnection;
+import database.Dbconnection;
 import models.Product;
 
 /**
@@ -13,7 +13,7 @@ import models.Product;
  */
 public class ProductUpdate {
 
-    DBconnection DBconnection;
+    Dbconnection DBconnection;
 
     public int updateProduct(Product product) {
         int id = product.getProductId();
@@ -29,8 +29,8 @@ public class ProductUpdate {
                 name, qty, price, category);
 
         System.out.println(updateProductQuery);
-        DBconnection = new DBconnection();
-        int result = DBconnection.execute_command(updateProductQuery);
+        DBconnection = new Dbconnection();
+        int result = DBconnection.manipulate(updateProductQuery);
         return result;
     }
 

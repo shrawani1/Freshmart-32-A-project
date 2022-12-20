@@ -1,10 +1,10 @@
 package controller;
 
-import database.DBconnection;
+import database.Dbconnection;
 import models.Product;
 
 public class ProductController {
-    DBconnection DBconnection;
+    Dbconnection DBconnection;
 
     public int addProduct(Product product) {
         int id = product.getProductId();
@@ -17,8 +17,27 @@ public class ProductController {
                 id,
                 name, qty, price, category);
         System.out.println(addProductQuery);
-        DBconnection = new DBconnection();
-        int result = DBconnection.execute_command(addProductQuery);
+        DBconnection = new Dbconnection();
+        int result = DBconnection.manipulate(addProductQuery);
+        return result;
+    }
+
+    public int updateProduct(Product product) {
+        int id = product.getProductId();
+        String name = product.getProductName();
+        int price = product.getProductPrice();
+        int qty = product.getProductQty();
+        String category = product.getProductCategory();
+
+        String updateProductQuery = String.format(
+                "update product_table set productId = '" + id + "',productName ='" + name + "',productQty='" + qty
+                        + "',productPrice='" + price + "',productCategory ='" + category + "' where productId ='%d' ",
+                id,
+                name, qty, price, category);
+
+        System.out.println(updateProductQuery);
+        DBconnection = new Dbconnection();
+        int result = DBconnection.manipulate(updateProductQuery);
         return result;
     }
 }

@@ -4,7 +4,7 @@ import javax.swing.*;
 
 import java.sql.*;
 
-public class DBconnection {
+public class Dbconnection {
 
     public Connection connection;
 
@@ -14,37 +14,32 @@ public class DBconnection {
 
     int value;
 
+    public Dbconnection() {
 
+        try {
 
-    public DBconnection(){
-
-        try { 
-            
             String username = "freshmart1";
- 
             String password = "Freshmart1";
 
             Class.forName("com.mysql.cj.jdbc.Driver");
 
             connection = DriverManager.getConnection(
 
-                    "jdbc:mysql://db4free.net/freshmart1",username,password);
+                    "jdbc:mysql://db4free.net:3306/freshmart1", username, password);
 
+            if (connection != null) {
 
+                System.out.println("Connected to database --> final_projectdb");
 
-                    if(connection!=null){
+            } else {
 
-                        System.out.println("Connected to database");
+                System.out.println("Error connecting to database");
 
-                    }else{
-
-                        System.out.println("Error connecting to database");
-
-                    }
+            }
 
             statement = connection.createStatement();
 
-        }catch (Exception e){
+        } catch (Exception e) {
 
             e.printStackTrace();
 
@@ -52,13 +47,11 @@ public class DBconnection {
 
     }
 
-
-
     // Via the use of sql query
 
     // insert, update and delete
 
-    public int execute_command(String query){
+    public int manipulate(String query) {
 
         try {
 
@@ -66,11 +59,11 @@ public class DBconnection {
 
             connection.close();
 
-        }catch (SQLIntegrityConstraintViolationException ex){
+        } catch (SQLIntegrityConstraintViolationException ex) {
 
             JOptionPane.showMessageDialog(null, "These details already exist!");
 
-        }catch (SQLException e){
+        } catch (SQLException e) {
 
             e.printStackTrace();
 
@@ -80,15 +73,13 @@ public class DBconnection {
 
     }
 
-
-
-    public ResultSet fetch_data(String query){
+    public ResultSet retrieve(String query) {
 
         try {
 
             resultSet = statement.executeQuery(query);
 
-        }catch (SQLException e){
+        } catch (SQLException e) {
 
             e.printStackTrace();
 
@@ -98,13 +89,10 @@ public class DBconnection {
 
     }
 
-
-
     public static void main(String[] args) {
 
-        new DBconnection();
+        new Dbconnection();
 
     }
 
 }
-

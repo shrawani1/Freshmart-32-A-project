@@ -6,7 +6,7 @@ package controller;
 
 import java.sql.ResultSet;
 
-import database.DBconnection;
+import database.Dbconnection;
 import model.CategoryV2;
 
 /**
@@ -14,7 +14,7 @@ import model.CategoryV2;
  * @author DELL
  */
 public class categoryController {
-    DBconnection dBconnection;
+    Dbconnection dBconnection;
 
     public int insertdetails(CategoryV2 categoryV2) {
         int SN = categoryV2.getCat_id();
@@ -23,15 +23,15 @@ public class categoryController {
 
         String insertQuery = "insert into manage_category(cat_sn,cat_name,cat_description) " + "values('" + SN + "','"
                 + name + "','" + desc + "')";
-        dBconnection = new DBconnection();
-        int result = dBconnection.execute_command(insertQuery);
+        dBconnection = new Dbconnection();
+        int result = dBconnection.manipulate(insertQuery);
         return result;
     }
 
     public ResultSet fetchDetails() {
         String selectQuery = "select * from manage_category";
-        dBconnection = new DBconnection();
-        ResultSet result = dBconnection.fetch_data(selectQuery);
+        dBconnection = new Dbconnection();
+        ResultSet result = dBconnection.retrieve(selectQuery);
         return result;
     }
 
@@ -42,8 +42,8 @@ public class categoryController {
 
         String query = "update manage_category set cat_name='" + name + "',cat_description='" + desc
                 + "' where cat_sn='" + SN + "'";
-        dBconnection = new DBconnection();
-        int result = dBconnection.execute_command(query);
+        dBconnection = new Dbconnection();
+        int result = dBconnection.manipulate(query);
         return result;
 
     }
@@ -51,8 +51,8 @@ public class categoryController {
     public int deleteDetails(CategoryV2 categoryV2) {
         int SN = categoryV2.getCat_id();
         String query = "delete from manage_category where cat_sn='" + SN + "' ";
-        dBconnection = new DBconnection();
-        int result = dBconnection.execute_command(query);
+        dBconnection = new Dbconnection();
+        int result = dBconnection.manipulate(query);
         return result;
 
     }

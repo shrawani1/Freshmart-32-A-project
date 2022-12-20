@@ -5,6 +5,7 @@
 
 package view;
 
+import controller.ProductController;
 import controller.Product_Controller;
 import controller.categoryController;
 import java.awt.print.PrinterException;
@@ -637,10 +638,11 @@ public class BillingPoint extends javax.swing.JFrame {
                 // if (selecteditem != null) {
                 // category = selecteditem.toString();
                 // }
-                String category = searchtf.getText();
-                String selectQuery = "select * from product_table where productName='" + category + "'";
-                DbConnection dbConnection = new DbConnection();
-                ResultSet result = dbConnection.retrieve(selectQuery);
+                String name = searchtf.getText();
+                Product p1 = new Product(0, name, 0, 0, null);
+                Product_Controller pc = new Product_Controller();
+                ResultSet result = pc.search(p1);
+
                 // return result;
                 // Product p1 = new Product(0, null, 0, 0, category);
                 // Product_Controller pc = new Product_Controller();
