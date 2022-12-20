@@ -4,7 +4,7 @@
  */
 package controller;
 
-import database.DBconnection;
+import database.Dbconnection;
 import model.SellerV2;
 
 /**
@@ -12,7 +12,7 @@ import model.SellerV2;
  * @author DELL
  */
 public class SellerControllerV2 {
-    DBconnection dBconnection;
+    Dbconnection dBconnection;
 
     public int insertDetails(SellerV2 sellerV2) {
         int seller_id = sellerV2.getSeller_id();
@@ -22,8 +22,8 @@ public class SellerControllerV2 {
 
         String insertQuery = "insert into manage_seller(seller_id,seller_name,password,gender)" + "values('" + seller_id
                 + "','" + seller_name + "','" + password + "','" + gender + "')";
-        dBconnection = new DBconnection();
-        int result = dBconnection.execute_command(insertQuery);
+        dBconnection = new Dbconnection();
+        int result = dBconnection.manipulate(insertQuery);
         return result;
     }
 }
