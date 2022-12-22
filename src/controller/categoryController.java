@@ -7,7 +7,7 @@ package controller;
 import java.sql.ResultSet;
 
 import database.Dbconnection;
-import model.CategoryV2;
+import models.CategoryV2;
 
 /**
  *

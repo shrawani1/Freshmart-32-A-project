@@ -18,7 +18,7 @@ public class ProductController {
                 name, qty, price, category);
         System.out.println(addProductQuery);
         DBconnection = new Dbconnection();
-        int result = DBconnection.manipulate(addProductQuery);
+        int result = DBconnection.execute_command(addProductQuery);
         return result;
     }
 
@@ -37,7 +37,7 @@ public class ProductController {
 
         System.out.println(updateProductQuery);
         DBconnection = new Dbconnection();
-        int result = DBconnection.manipulate(updateProductQuery);
+        int result = DBconnection.execute_command(updateProductQuery);
         return result;
     }
 }

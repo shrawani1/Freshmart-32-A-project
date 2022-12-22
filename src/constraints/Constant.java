@@ -4,7 +4,7 @@
  */
 package constraints;
 
-import model.SellerV2;
+import models.SellerV2;
 
 /**
  *
@@ -12,11 +12,11 @@ import model.SellerV2;
  */
 public class Constant {
     public static SellerV2 loggedInUser;
-    
-//    for user
+
+    // for user
     public static String DB_USER_ID = "user_id";
     public static String DB_USER_USERNAME = "username";
     public static String DB_USER_PASSWORD = "password";
-    public static String DB_EMAIL= "email";
-    
+    public static String DB_EMAIL = "email";
+
 }

@@ -4,6 +4,15 @@
  */
 package view;
 
+import java.awt.event.MouseEvent;
+import java.sql.ResultSet;
+
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+
+import controller.SellerControllerV2;
+import models.SellerV2;
+
 /**
  *
  * @author DELL
@@ -15,6 +24,7 @@ public class manageSeller extends javax.swing.JFrame {
      */
     public manageSeller() {
         initComponents();
+        display();
     }
 
     /**
@@ -24,7 +34,12 @@ public class manageSeller extends javax.swing.JFrame {
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jPanel2 = new javax.swing.JPanel();
@@ -39,10 +54,9 @@ public class manageSeller extends javax.swing.JFrame {
         sellerName_tf = new javax.swing.JTextField();
         sellerPassword_tf = new javax.swing.JTextField();
         sellerGender_tf = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        updatebtn = new javax.swing.JButton();
+        removebtn = new javax.swing.JButton();
+        clearbtn = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tbl_Seller = new javax.swing.JTable();
         jLabel6 = new javax.swing.JLabel();
@@ -51,17 +65,16 @@ public class manageSeller extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jButton6 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
+        registerbtn = new javax.swing.JButton();
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
+                jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 100, Short.MAX_VALUE));
         jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
+                jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 100, Short.MAX_VALUE));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1000, 600));
@@ -118,44 +131,50 @@ public class manageSeller extends javax.swing.JFrame {
         });
         jPanel3.add(sellerGender_tf, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 90, 170, -1));
 
-        jButton1.setBackground(new java.awt.Color(51, 255, 102));
-        jButton1.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 36)); // NOI18N
-        jButton1.setText("REGISTER");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        updatebtn.setBackground(new java.awt.Color(51, 153, 255));
+        updatebtn.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 36)); // NOI18N
+        updatebtn.setText("UPDATE ");
+        updatebtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                updatebtnActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 140, -1, -1));
+        jPanel3.add(updatebtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 140, 150, -1));
 
-        jButton2.setBackground(new java.awt.Color(51, 153, 255));
-        jButton2.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 36)); // NOI18N
-        jButton2.setText("UPDATE ");
-        jPanel3.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 140, 150, -1));
+        removebtn.setBackground(new java.awt.Color(255, 51, 51));
+        removebtn.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 36)); // NOI18N
+        removebtn.setText("REMOVE");
+        removebtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                removebtnActionPerformed(evt);
+            }
+        });
+        jPanel3.add(removebtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 140, 150, -1));
 
-        jButton3.setBackground(new java.awt.Color(255, 51, 51));
-        jButton3.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 36)); // NOI18N
-        jButton3.setText("REMOVE");
-        jPanel3.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 140, 150, -1));
-
-        jButton4.setBackground(new java.awt.Color(255, 153, 51));
-        jButton4.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 36)); // NOI18N
-        jButton4.setText("CLEAR");
-        jPanel3.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 140, 150, -1));
+        clearbtn.setBackground(new java.awt.Color(255, 153, 51));
+        clearbtn.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 36)); // NOI18N
+        clearbtn.setText("CLEAR");
+        clearbtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                clearbtnActionPerformed(evt);
+            }
+        });
+        jPanel3.add(clearbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 140, 150, -1));
 
         tbl_Seller.setBackground(new java.awt.Color(204, 204, 255));
-        tbl_Seller.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        tbl_Seller.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         tbl_Seller.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Seller ID", "Seller Name", "seller Password", "seller Gender"
+                new Object[][] {
+
+                },
+                new String[] {
+                        "Seller ID", "Seller Name", "seller Password", "seller Gender"
+                }));
+        tbl_Seller.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tbl_SellerMouseClicked(evt);
             }
-        ));
+        });
         jScrollPane1.setViewportView(tbl_Seller);
 
         jPanel3.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 220, 650, 280));
@@ -201,38 +220,182 @@ public class manageSeller extends javax.swing.JFrame {
         });
         jPanel3.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 510, -1, -1));
 
+        registerbtn.setBackground(new java.awt.Color(102, 255, 102));
+        registerbtn.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 36)); // NOI18N
+        registerbtn.setText("REGISTER");
+        registerbtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                registerbtnActionPerformed(evt);
+            }
+        });
+        jPanel3.add(registerbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 140, -1, -1));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addGap(16, 16, 16)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(0, 0, Short.MAX_VALUE)));
         layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 695, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 180, Short.MAX_VALUE)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(682, 682, 682))
-        );
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 695,
+                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 180,
+                                        Short.MAX_VALUE)
+                                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(682, 682, 682)));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+    protected void tbl_SellerMouseClicked(MouseEvent evt) {
+        DefaultTableModel tblModel = (DefaultTableModel) tbl_Seller.getModel();
+        String tblsellerId = tblModel.getValueAt(tbl_Seller.getSelectedRow(), 0).toString();
+        String tblsellerName = tblModel.getValueAt(tbl_Seller.getSelectedRow(), 1).toString();
+        String tblsellerpassword = tblModel.getValueAt(tbl_Seller.getSelectedRow(), 2).toString();
+        String tblsellergender = tblModel.getValueAt(tbl_Seller.getSelectedRow(), 3).toString();
+
+        sellerId_tf.setText(tblsellerId);
+        sellerName_tf.setText(tblsellerName);
+        sellerPassword_tf.setText(tblsellerpassword);
+        sellerGender_tf.setText(tblsellergender);
+        /* CatCb.addItem(tbleprodCategory); */
+
+    }
+
+    private void removebtnActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_removebtnActionPerformed
+        String sellerId = sellerId_tf.getText();
+        String sellerName = sellerName_tf.getText();
+        String password = sellerPassword_tf.getText();
+        String gender = sellerGender_tf.getText();
+        if (sellerId.isEmpty() || sellerName.isEmpty() || password.isEmpty() || gender.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Missing Information");
+
+        }
+
+        else {
+            SellerV2 newseller = new SellerV2(Integer.parseInt(sellerId), sellerName, password, gender);
+            SellerControllerV2 pc1 = new SellerControllerV2();
+            pc1.deleteseller(newseller);
+            JOptionPane.showMessageDialog(this, "Product Deleted Successfully");
+        }
+
+        DefaultTableModel tblModel = (DefaultTableModel) tbl_Seller.getModel();
+        if (tbl_Seller.getSelectedRowCount() == 1) {
+            tblModel.removeRow(tbl_Seller.getSelectedRow());
+
+        } else {
+            if (tbl_Seller.getRowCount() == 0) {
+                JOptionPane.showMessageDialog(this, "Table is empty");
+            } else {
+                JOptionPane.showMessageDialog(this, "Select a row to delete");
+
+            }
+
+        }
+    }// GEN-LAST:event_removebtnActionPerformed
+
+    private void clearbtnActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_clearbtnActionPerformed
+        sellerId_tf.setText("");
+        sellerName_tf.setText("");
+        sellerPassword_tf.setText("");
+        sellerGender_tf.setText("");
+
+    }// GEN-LAST:event_clearbtnActionPerformed
+
+    public void display() {
+        SellerV2 p1 = new SellerV2(0, null, null, null);
+        SellerControllerV2 pc = new SellerControllerV2();
+        ResultSet result = pc.fetchDetails();
+
+        try {
+            DefaultTableModel model = (DefaultTableModel) tbl_Seller.getModel();
+            model.setRowCount(0);
+            while (result.next()) {
+                int sellerId = Integer.parseInt(result.getString(1));
+                String sellerName = result.getString(2);
+                String password = result.getString(3);
+                String gender = result.getString(4);
+                model.addRow(new Object[] { sellerId, sellerName, password, gender });
+
+            }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jButton6ActionPerformed
         dispose();
         new product().setVisible(true);
-    }//GEN-LAST:event_jButton6ActionPerformed
+    }// GEN-LAST:event_jButton6ActionPerformed
 
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-       dispose();
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jButton7ActionPerformed
+        dispose();
         new manageCategoryV2().setVisible(true);
-    }//GEN-LAST:event_jButton7ActionPerformed
+    }// GEN-LAST:event_jButton7ActionPerformed
+
+    private void updatebtnActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_updatebtnActionPerformed
+
+        String sellerId = sellerId_tf.getText();
+        String sellerName = sellerName_tf.getText();
+        String password = sellerPassword_tf.getText();
+        String gender = sellerGender_tf.getText();
+
+        SellerV2 newSeller = new SellerV2(Integer.parseInt(sellerId), sellerName, password, gender);
+        SellerControllerV2 pc1 = new SellerControllerV2();
+        pc1.updateSeller(newSeller);
+
+        DefaultTableModel model = (DefaultTableModel) tbl_Seller.getModel();
+
+        if (tbl_Seller.getSelectedRowCount() == 1) {
+            model.setValueAt(sellerId, tbl_Seller.getSelectedRow(), 0);
+            model.setValueAt(sellerName, tbl_Seller.getSelectedRow(), 1);
+            model.setValueAt(password, tbl_Seller.getSelectedRow(), 2);
+            model.setValueAt(gender, tbl_Seller.getSelectedRow(), 3);
+
+            JOptionPane.showMessageDialog(this, "updated successfully");
+        } else {
+            if (tbl_Seller.getRowCount() == 0) {
+                JOptionPane.showMessageDialog(this, "The table is empty");
+            } else {
+                JOptionPane.showMessageDialog(this, "Please select a single Row for updating");
+
+            }
+
+        }
+    }
+
+    private void registerbtnActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_registerbtnActionPerformed
+        String sellerId = sellerId_tf.getText();
+        String sellerName = sellerName_tf.getText();
+        String password = sellerPassword_tf.getText();
+        String gender = sellerGender_tf.getText();
+
+        if (sellerId.isEmpty() || sellerName.isEmpty() || password.isEmpty() || gender.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Missing Information");
+
+        }
+
+        else {
+            SellerV2 newseller = new SellerV2(Integer.parseInt(sellerId), sellerName, password, gender);
+            SellerControllerV2 pc = new SellerControllerV2();
+            pc.insertDetails(newseller);
+            JOptionPane.showMessageDialog(this, "seller Registered Successfully");
+
+            DefaultTableModel model = (DefaultTableModel) tbl_Seller.getModel();
+            model.addRow(new Object[] { sellerId, sellerName, password, gender });
+        }
+    }// GEN-LAST:event_registerbtnActionPerformed
 
     private void sellerGender_tfActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_sellerGender_tfActionPerformed
         // TODO add your handling code here:
@@ -295,10 +458,7 @@ public class manageSeller extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
+    private javax.swing.JButton clearbtn;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
@@ -314,10 +474,13 @@ public class manageSeller extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JButton registerbtn;
+    private javax.swing.JButton removebtn;
     private javax.swing.JTextField sellerGender_tf;
     private javax.swing.JTextField sellerId_tf;
     private javax.swing.JTextField sellerName_tf;
     private javax.swing.JTextField sellerPassword_tf;
     private javax.swing.JTable tbl_Seller;
+    private javax.swing.JButton updatebtn;
     // End of variables declaration//GEN-END:variables
 }

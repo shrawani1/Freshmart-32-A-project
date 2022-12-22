@@ -4,8 +4,10 @@
  */
 package controller;
 
+import java.sql.ResultSet;
+
 import database.Dbconnection;
-import model.SellerV2;
+import models.SellerV2;
 
 /**
  *
@@ -26,4 +28,41 @@ public class SellerControllerV2 {
         int result = dBconnection.manipulate(insertQuery);
         return result;
     }
+
+    public ResultSet fetchDetails() {
+        String selectQuery = "select * from manage_seller";
+        dBconnection = new Dbconnection();
+        ResultSet result = dBconnection.retrieve(selectQuery);
+        return result;
+
+    }
+
+    public int updateSeller(SellerV2 sellerV2) {
+        int id = sellerV2.getSeller_id();
+        String name = sellerV2.getSeller_name();
+        String password = sellerV2.getPassword();
+        String gender = sellerV2.getGender();
+
+        String updateSeller = String.format(
+                "update seller_table set sellerId = '" + id + "',sellerName ='" + name
+                        + "',password='" + password + "',gender ='" + gender + "' where sellerId ='%d' ",
+                id,
+                name, password, gender);
+
+        System.out.println(updateSeller);
+        dBconnection = new Dbconnection();
+        int result = dBconnection.manipulate(updateSeller);
+        return result;
+    }
+
+    public int deleteseller(SellerV2 sellerV2) {
+        int id = sellerV2.getSeller_id();
+        String deleteseller = String.format("delete from manage_seller where seller_id ='" + id + "'");
+
+        System.out.println(deleteseller);
+        dBconnection = new Dbconnection();
+        int result = dBconnection.manipulate(deleteseller);
+        return result;
+    }
+
 }
