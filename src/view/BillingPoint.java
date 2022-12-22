@@ -634,10 +634,6 @@ public class BillingPoint extends javax.swing.JFrame {
 
         private void searchbtnActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_searchbtnActionPerformed
 
-                // Object selecteditem = combo_category.getSelectedItem();
-                // if (selecteditem != null) {
-                // category = selecteditem.toString();
-                // }
                 String name = searchtf.getText();
                 Product p1 = new Product(0, name, 0, 0, null);
                 Product_Controller pc = new Product_Controller();
