@@ -11,7 +11,7 @@ import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 import controller.categoryController;
-import model.CategoryV2;
+import models.CategoryV2;
 
 /**
  *
