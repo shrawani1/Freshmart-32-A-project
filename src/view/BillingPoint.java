@@ -639,11 +639,6 @@ public class BillingPoint extends javax.swing.JFrame {
                 Product_Controller pc = new Product_Controller();
                 ResultSet result = pc.search(p1);
 
-                // return result;
-                // Product p1 = new Product(0, null, 0, 0, category);
-                // Product_Controller pc = new Product_Controller();
-                // ResultSet result = pc.fetchProduct(p1);
-
                 try {
                         DefaultTableModel model = (DefaultTableModel) tbl_browse.getModel();
                         model.setRowCount(0);
