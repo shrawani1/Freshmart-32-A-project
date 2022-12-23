@@ -655,11 +655,7 @@ public class BillingPoint extends javax.swing.JFrame {
                         ex.printStackTrace();
                 }
 
-                // code
-
-                // here:
-
-        }// GEN-LAST:event_searchbtnActionPerformed
+        }
 
         private void deletebtnActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_deletebtnActionPerformed
                 DefaultTableModel t1 = (DefaultTableModel) tbl_Bill.getModel();
