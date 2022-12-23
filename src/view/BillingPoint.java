@@ -756,10 +756,6 @@ public class BillingPoint extends javax.swing.JFrame {
                         ex.printStackTrace();
                 }
 
-                // code
-
-                // here:
-
         }// GEN-LAST:event_btnFilterActionPerformed
 
         public static void main(String args[]) {
