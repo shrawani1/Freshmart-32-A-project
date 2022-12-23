@@ -558,7 +558,7 @@ public class BillingPoint extends javax.swing.JFrame {
         }// GEN-LAST:event_btnPrintActionPerformed
 
         private void btnAddBillActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btnAddBillActionPerformed
-                // TODO add your handling code here:
+
                 String productName = tfProductName.getText();
                 String productQty = tfProductQty.getText();
 
