@@ -715,6 +715,7 @@ public class BillingPoint extends javax.swing.JFrame {
                                 String category = result.getString(2);
                                 combo_category.addItem(category);
                         }
+
                 } catch (SQLException e) {
                         // TODO Auto-generated catch block
                         e.printStackTrace();
