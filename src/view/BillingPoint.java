@@ -40,6 +40,7 @@ public class BillingPoint extends javax.swing.JFrame {
         public BillingPoint() {
                 initComponents();
                 fillCategory();
+                display();
 
         }
 
@@ -667,6 +668,70 @@ public class BillingPoint extends javax.swing.JFrame {
                         t1.removeRow(k);
                 }
         }// GEN-LAST:event_deletebtnActionPerformed
+
+        /**
+         * @param evt
+         */
+
+        // private void formWindowOpened(java.awt.event.WindowEvent evt) {//
+        // // GEN-FIRST:event_formWindowOpened
+        // String category = null;
+        // Object selecteditem = combo_category.getSelectedItem();
+        // if (selecteditem != null) {
+        // category = selecteditem.toString();
+        // }
+        // Product p1 = new Product(0, null, 0, 0, category);
+        // Product_Controller pc = new Product_Controller();
+        // ResultSet result = pc.fetchProduct(p1);
+
+        // try {
+        // DefaultTableModel model = (DefaultTableModel) tbl_browse.getModel();
+        // model.setRowCount(0);
+        // while (result.next()) {
+        // int prodId = Integer.parseInt(result.getString("productId"));
+        // String prodName = result.getString("productName");
+        // int prodQty = Integer.parseInt(result.getString("productQty"));
+        // int prodPrice = Integer.parseInt(result.getString("productPrice"));
+        // String prodCategory = result.getString("productCategory");
+        // model.addRow(new Object[] { prodId, prodName, prodQty, prodPrice,
+        // prodCategory });// TODO
+        // // add
+        // // your
+
+        // // handlin
+
+        // }
+        // } catch (final Exception ex) {
+        // ex.printStackTrace();
+        // }
+        // }
+
+        public void display() {
+                String category = null;
+                Object selecteditem = combo_category.getSelectedItem();
+                if (selecteditem != null) {
+                        category = selecteditem.toString();
+                }
+                Product p1 = new Product(0, null, 0, 0, category);
+                Product_Controller pc = new Product_Controller();
+                ResultSet result = pc.fetchProduct(p1);
+
+                try {
+                        DefaultTableModel model = (DefaultTableModel) tbl_browse.getModel();
+                        model.setRowCount(0);
+                        while (result.next()) {
+                                int prodId = Integer.parseInt(result.getString("productId"));
+                                String prodName = result.getString("productName");
+                                int prodQty = Integer.parseInt(result.getString("productQty"));
+                                int prodPrice = Integer.parseInt(result.getString("productPrice"));
+                                String prodCategory = result.getString("productCategory");
+                                model.addRow(new Object[] { prodId, prodName, prodQty, prodPrice,
+                                                prodCategory });
+                        }
+                } catch (Exception ex) {
+                        ex.printStackTrace();
+                }
+        }
 
         private void btnRefreshActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btnRefreshActionPerformed
 
