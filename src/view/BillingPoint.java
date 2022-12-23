@@ -655,10 +655,6 @@ public class BillingPoint extends javax.swing.JFrame {
                         ex.printStackTrace();
                 }
 
-                // code
-
-                // here:
-
         }
 
         private void deletebtnActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_deletebtnActionPerformed
