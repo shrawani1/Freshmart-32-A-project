@@ -628,7 +628,7 @@ public class BillingPoint extends javax.swing.JFrame {
          * 
          * private void searchtfActionPerformed(java.awt.event.ActionEvent evt)
          * {//GEN-FIRST:event_searchtfActionPerformed
-         * // TODO add your handling code here:
+         * 
          * }//GEN-LAST:event_searchtfActionPerformed
          */
 
@@ -669,7 +669,7 @@ public class BillingPoint extends javax.swing.JFrame {
         }// GEN-LAST:event_deletebtnActionPerformed
 
         private void btnRefreshActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btnRefreshActionPerformed
-                // TODO add your handling code here:
+
                 int selectedRow = tbl_browse.getSelectedRow();
                 DefaultTableModel dtm = (DefaultTableModel) tbl_browse.getModel();
 
@@ -755,10 +755,6 @@ public class BillingPoint extends javax.swing.JFrame {
                 } catch (Exception ex) {
                         ex.printStackTrace();
                 }
-
-                // code
-
-                // here:
 
         }// GEN-LAST:event_btnFilterActionPerformed
 
