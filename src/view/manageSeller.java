@@ -269,6 +269,7 @@ public class manageSeller extends javax.swing.JFrame {
         sellerName_tf.setText(tblsellerName);
         sellerPassword_tf.setText(tblsellerpassword);
         sellerGender_tf.setText(tblsellergender);
+        /* CatCb.addItem(tbleprodCategory); */
 
     }
 

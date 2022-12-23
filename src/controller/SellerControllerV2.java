@@ -43,11 +43,8 @@ public class SellerControllerV2 {
         String password = sellerV2.getPassword();
         String gender = sellerV2.getGender();
 
-        String updateSeller = String.format(
-                "update seller_table set sellerId = '" + id + "',sellerName ='" + name
-                        + "',password='" + password + "',gender ='" + gender + "' where sellerId ='%d' ",
-                id,
-                name, password, gender);
+        String updateSeller = "update manage_seller set seller_id = '" + id + "',seller_name ='" + name
+                + "',password='" + password + "',gender ='" + gender + "' where seller_id ='" + id + "'";
 
         System.out.println(updateSeller);
         dBconnection = new Dbconnection();
