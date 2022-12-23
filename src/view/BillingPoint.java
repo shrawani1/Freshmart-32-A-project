@@ -554,7 +554,7 @@ public class BillingPoint extends javax.swing.JFrame {
                         tbl_Bill.print(JTable.PrintMode.NORMAL, header, footer);
                 } catch (PrinterException e) {
                         JOptionPane.showMessageDialog(null, e);
-                } // TODO add your handling code here:
+                }
         }// GEN-LAST:event_btnPrintActionPerformed
 
         private void btnAddBillActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btnAddBillActionPerformed
