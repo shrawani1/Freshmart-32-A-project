@@ -705,8 +705,7 @@ public class BillingPoint extends javax.swing.JFrame {
                 }
 
                 totalLabel.setText("Rs...." + total);
-                // totalText.setText(Integer.toString(total));
-                // tota
+
         }// GEN-LAST:event_Total_btnActionPerformed
 
         public void fillCategory() {
