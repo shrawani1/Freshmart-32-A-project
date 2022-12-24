@@ -203,6 +203,11 @@ public class login extends javax.swing.JFrame {
 
         aboutusbtn.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 22)); // NOI18N
         aboutusbtn.setText("About us");
+        aboutusbtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                aboutusbtnActionPerformed(evt);
+            }
+        });
         jPanel2.add(aboutusbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 422, 160, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -235,6 +240,11 @@ public class login extends javax.swing.JFrame {
         dispose();
         new contactus().setVisible(true);
     }//GEN-LAST:event_contactusbtnActionPerformed
+
+    private void aboutusbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aboutusbtnActionPerformed
+        dispose();
+        new aboutUs().setVisible(true);
+    }//GEN-LAST:event_aboutusbtnActionPerformed
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {// GEN-FIRST:event_formWindowOpened
         // TODO add your handling code here:
