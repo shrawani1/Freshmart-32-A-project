@@ -37,6 +37,7 @@ public class manageCategoryV2 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
+    // <editor-fold defaultstate="collapsed" desc="Generated
     // Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -131,6 +132,11 @@ public class manageCategoryV2 extends javax.swing.JFrame {
         clearBtn.setBackground(new java.awt.Color(204, 255, 51));
         clearBtn.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 24)); // NOI18N
         clearBtn.setText("CLEAR");
+        clearBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                clearBtnActionPerformed(evt);
+            }
+        });
 
         jLabel5.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 48)); // NOI18N
         jLabel5.setText("Manage Category");
@@ -273,6 +279,13 @@ public class manageCategoryV2 extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void clearBtnActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_clearBtnActionPerformed
+        catsntf.setText("");
+        catnametf.setText("");
+        catdescriptiontf.setText("");
+        // TODO add your handling code here:
+    }// GEN-LAST:event_clearBtnActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jButton5ActionPerformed
         dispose();
