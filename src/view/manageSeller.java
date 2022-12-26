@@ -287,7 +287,7 @@ public class manageSeller extends javax.swing.JFrame {
             SellerV2 newseller = new SellerV2(Integer.parseInt(sellerId), sellerName, password, gender);
             SellerControllerV2 pc1 = new SellerControllerV2();
             pc1.deleteseller(newseller);
-            JOptionPane.showMessageDialog(this, "Product Deleted Successfully");
+            JOptionPane.showMessageDialog(this, "Seller Deleted Successfully");
         }
 
         DefaultTableModel tblModel = (DefaultTableModel) tbl_Seller.getModel();
