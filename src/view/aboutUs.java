@@ -56,7 +56,7 @@ public class aboutUs extends javax.swing.JFrame  {
         jLayeredPane1.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED));
         jLayeredPane1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLayeredPane2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout() );
+        jLayeredPane1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout() );
 
         jLabel2.setFont( new java.awt.Font("Tw Cen MT Condensed", 1, 48)); // NOI18N
         jLabel2.setHorizontalAlignment( javax.swing.SwingConstants.CENTER);
