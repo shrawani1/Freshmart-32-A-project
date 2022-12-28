@@ -605,8 +605,6 @@ public class BillingPoint extends javax.swing.JFrame {
         /*
          * private void formWindowOpened(java.awt.event.WindowEvent evt)
          * {//GEN-FIRST:event_formWindowOpened
-         * // TODO add your handling code here:
-         * tfProductName.setText("HJJKHJK");
          * }//GEN-LAST:event_formWindowOpened
          */
 
@@ -614,23 +612,16 @@ public class BillingPoint extends javax.swing.JFrame {
                 // TODO add your handling code here:
         }// GEN-LAST:event_tfProductQtyActionPerformed
         /*
-         * int Uprice;
+         * 
          * private void tfProductNameActionPerformed(java.awt.event.ActionEvent evt)
          * {//GEN-FIRST:event_tfProductNameActionPerformed
          * // TODO add your handling code here:
          * DefaultTableModel model= (DefaultTableModel) p\ProductTable.getModel();
-         * int Myindex=ProductTable.getSelectedRow();
-         * Product_Id.setText(model.getValueAt(Myindex,0).toString());
          * Uprice=Integer.valueOf(model.getValueAt(Myindex,1).toString());
          * Product_Name.setText(model.getValueAt(Myindex,0).toString());
          * ProductQty.setText(model.getValueAt(Myindex,0).toString());
          * ProductPrice.setText(model.getValueAt(Myindex,0).toString());
          * }//GEN-LAST:event_tfProductNameActionPerformed
-         * 
-         * private void searchtfActionPerformed(java.awt.event.ActionEvent evt)
-         * {//GEN-FIRST:event_searchtfActionPerformed
-         * 
-         * }//GEN-LAST:event_searchtfActionPerformed
          */
 
         private void searchbtnActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_searchbtnActionPerformed
