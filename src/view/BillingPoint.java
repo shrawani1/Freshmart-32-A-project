@@ -660,7 +660,6 @@ public class BillingPoint extends javax.swing.JFrame {
         // while (result.next()) {
         // int prodId = Integer.parseInt(result.getString("productId"));
         // String prodName = result.getString("productName");
-        // int prodQty = Integer.parseInt(result.getString("productQty"));
         // int prodPrice = Integer.parseInt(result.getString("productPrice"));
         // model.addRow(new Object[] { prodId, prodName, prodQty, prodPrice,
         // prodCategory });
