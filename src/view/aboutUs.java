@@ -1,7 +1,7 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+ *///
 package view;
 
 /**
@@ -24,8 +24,9 @@ public class aboutUs extends javax.swing.JFrame {
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated
+
     // <editor-fold defaultstate="collapsed" desc="Generated
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
@@ -92,15 +93,18 @@ public class aboutUs extends javax.swing.JFrame {
         jLayeredPane2.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 80, 240, 90));
 
         jLabel14.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 18)); // NOI18N
-        jLabel14.setText("Look no further than Freshmart.This application was developed with the goal of assisting supermarket ");
+        jLabel14.setText(
+                "Look no further than Freshmart.This application was developed with the goal of assisting supermarket ");
         jLayeredPane2.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 100, -1, 90));
 
         jLabel15.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 18)); // NOI18N
-        jLabel15.setText("owners in maximizing their potential. With our easy to use GUI, the app is beginner friendly.");
+        jLabel15.setText(
+                "owners in maximizing their potential. With our easy to use GUI, the app is beginner friendly.");
         jLayeredPane2.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 120, -1, 90));
 
         jLabel16.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 18)); // NOI18N
-        jLabel16.setText(" We help you become efficient with our amazing features like managing your sellers,bill printing,");
+        jLabel16.setText(
+                " We help you become efficient with our amazing features like managing your sellers,bill printing,");
         jLayeredPane2.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 150, 530, 90));
 
         jLabel17.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 18)); // NOI18N
@@ -124,36 +128,36 @@ public class aboutUs extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(33, 33, 33)
-                .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(28, Short.MAX_VALUE))
-        );
+                jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(33, 33, 33)
+                                .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(28, Short.MAX_VALUE)));
         jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(14, 14, 14))
-        );
+                jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(14, 14, 14)));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(180, 180, 180)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(597, Short.MAX_VALUE))
-        );
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addGap(180, 180, 180)
+                                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(597, Short.MAX_VALUE)));
         layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addContainerGap()));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

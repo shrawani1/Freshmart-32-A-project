@@ -1,7 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- *///////
+
+// * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ //* Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
+ //*///////
 package view;
 
 import models.User;
@@ -34,7 +34,7 @@ public class login extends javax.swing.JFrame {
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated
-    // <editor-fold defaultstate="collapsed" desc="Generated
+  
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -316,12 +316,10 @@ public class login extends javax.swing.JFrame {
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         // <editor-fold defaultstate="collapsed" desc=" Look and feel setting code
-        // (optional) ">
         /*
          * If Nimbus (introduced in Java SE 6) is not available, stay with the default
          * look and feel.
-         * For details see
-         * http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
+        
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager
