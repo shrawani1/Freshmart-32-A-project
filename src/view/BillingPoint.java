@@ -647,8 +647,6 @@ public class BillingPoint extends javax.swing.JFrame {
 
         // private void formWindowOpened(java.awt.event.WindowEvent evt) {//
         // // GEN-FIRST:event_formWindowOpened
-        // String category = null;
-        // Object selecteditem = combo_category.getSelectedItem();
         // if (selecteditem != null) {
         // category = selecteditem.toString();
         // }
