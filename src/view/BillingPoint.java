@@ -300,7 +300,7 @@ public class BillingPoint extends javax.swing.JFrame {
                 });
 
                 btnRefresh.setBackground(new java.awt.Color(0, 204, 102));
-                btnRefresh.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+                btnRefresh.setFont(new java.awt.Font("Segoe UI", 1, 14));
                 btnRefresh.setText("Select");
                 btnRefresh.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
