@@ -53,10 +53,10 @@ public class aboutUs extends javax.swing.JFrame  {
         jPanel1.setBackground(new java.awt.Color(197, 234, 238));
 
         jLayeredPane1.setBackground(new java.awt.Color(255, 255, 255));
-        jLayeredPane1.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED));
+        jLayeredPane1.setBorder( javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED));
         jLayeredPane1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLayeredPane2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jLayeredPane2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout() );
 
         jLabel2.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 48)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -196,7 +196,8 @@ public class aboutUs extends javax.swing.JFrame  {
         /* Create and display the forms */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new aboutUs().setVisible(true);}
+                new aboutUs().setVisible(true);
+            }
         });
     }
 
