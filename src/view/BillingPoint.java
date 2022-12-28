@@ -649,7 +649,7 @@ public class BillingPoint extends javax.swing.JFrame {
         // // GEN-FIRST:event_formWindowOpened
         // if (selecteditem != null) {
         // }
-        // Product_Controller pc = new ProductController();
+        // Product_Controller pc = new Productcontroller();
         // ResultSet result = pc.fetchProduct(p1);
 
         // try {
