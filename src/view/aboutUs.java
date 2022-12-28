@@ -58,7 +58,7 @@ public class aboutUs extends javax.swing.JFrame  {
 
         jLayeredPane2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout() );
 
-        jLabel2.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 48)); // NOI18N
+        jLabel2. setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 48)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("ABOUT US");
         jLayeredPane2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 20, 390, -1));
