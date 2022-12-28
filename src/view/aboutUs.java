@@ -8,14 +8,13 @@ package view;
  *
  * @author Dell5468i5
  */
-public class aboutUs extends javax.swing.JFrame {
+public class aboutUs extends javax.swing.JFrame  {
 
     /**
      * Creates new form aboutUs
      */
     public aboutUs() {
-        initComponents();
-    }
+        initComponents();}
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -152,6 +151,7 @@ public class aboutUs extends javax.swing.JFrame {
                                         javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addContainerGap(597, Short.MAX_VALUE)));
         layout.setVerticalGroup(
+
                 layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createSequentialGroup()
                                 .addContainerGap()
@@ -166,7 +166,7 @@ public class aboutUs extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
+        /* Set the Nimbus look and feels */
         // <editor-fold defaultstate="collapsed" desc=" Look and feel setting code
         // (optional) ">
         /*
@@ -191,13 +191,12 @@ public class aboutUs extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(aboutUs.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        // </editor-fold>
+        
 
-        /* Create and display the form */
+        /* Create and display the forms */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new aboutUs().setVisible(true);
-            }
+                new aboutUs().setVisible(true);}
         });
     }
 
