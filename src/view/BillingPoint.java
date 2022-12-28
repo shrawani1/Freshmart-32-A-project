@@ -650,7 +650,6 @@ public class BillingPoint extends javax.swing.JFrame {
         // if (selecteditem != null) {
         // }
         // Product_Controller pc = new Product_Controller();
-        // ResultSet result = pc.fetchProduct(p1);
 
         // try {
         // DefaultTableModel model = (DefaultTableModel) tbl_browse.getModel();
