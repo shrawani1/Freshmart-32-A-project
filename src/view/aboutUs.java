@@ -151,6 +151,7 @@ public class aboutUs extends javax.swing.JFrame  {
                                         javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addContainerGap(597, Short.MAX_VALUE)));
         layout.setVerticalGroup(
+            
                 layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createSequentialGroup()
                                 .addContainerGap()
