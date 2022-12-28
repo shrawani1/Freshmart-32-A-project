@@ -598,15 +598,8 @@ public class BillingPoint extends javax.swing.JFrame {
         }// GEN-LAST:event_btnAddBillActionPerformed
 
         private void btnClearActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btnClearActionPerformed
-                // TODO add your handling code here:
                 removeContents();
         }// GEN-LAST:event_btnClearActionPerformed
-
-        /*
-         * private void formWindowOpened(java.awt.event.WindowEvent evt)
-         * {//GEN-FIRST:event_formWindowOpened
-         * }//GEN-LAST:event_formWindowOpened
-         */
 
         private void tfProductQtyActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_tfProductQtyActionPerformed
                 // TODO add your handling code here:
