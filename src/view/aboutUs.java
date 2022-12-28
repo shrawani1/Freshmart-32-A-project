@@ -196,7 +196,8 @@ public class aboutUs extends javax.swing.JFrame  {
         /* Create and display the forms */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new aboutUs().setVisible(true);}
+                new aboutUs().setVisible(true);
+            }
         });
     }
 
