@@ -50,7 +50,7 @@ public class aboutUs extends javax.swing.JFrame  {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(197, 234, 238));
+        jPanel1.setBackground(new java.awt.Color(198, 234, 238));
 
         jLayeredPane1.setBackground(new java.awt.Color(255, 255, 255));
         jLayeredPane1.setBorder( javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED));
