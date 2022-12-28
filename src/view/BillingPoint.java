@@ -614,7 +614,7 @@ public class BillingPoint extends javax.swing.JFrame {
                 // TODO add your handling code here:
         }// GEN-LAST:event_tfProductQtyActionPerformed
         /*
-         * int Uprice;
+         * 
          * private void tfProductNameActionPerformed(java.awt.event.ActionEvent evt)
          * {//GEN-FIRST:event_tfProductNameActionPerformed
          * // TODO add your handling code here:
