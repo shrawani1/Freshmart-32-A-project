@@ -610,8 +610,6 @@ public class BillingPoint extends javax.swing.JFrame {
          * Uprice=Integer.valueOf(model.getValueAt(Myindex,1).toString());
          * Product_Name.setText(model.getValueAt(Myindex,0).toString());
          * ProductQty.setText(model.getValueAt(Myindex,0).toString());
-         * ProductPrice.setText(model.getValueAt(Myindex,0).toString());
-         * }//GEN-LAST:event_tfProductNameActionPerformed
          */
 
         private void searchbtnActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_searchbtnActionPerformed
