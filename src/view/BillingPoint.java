@@ -694,17 +694,12 @@ public class BillingPoint extends javax.swing.JFrame {
         // int prodPrice = Integer.parseInt(result.getString("productPrice"));
         // String prodCategory = result.getString("productCategory");
         // model.addRow(new Object[] { prodId, prodName, prodQty, prodPrice,
-        // prodCategory });// TODO
-        // // add
-        // // your
+        // prodCategory });
 
         // // handlin
 
         // }
         // } catch (final Exception ex) {
-        // ex.printStackTrace();
-        // }
-        // }
 
         public void display() {
                 String category = null;
