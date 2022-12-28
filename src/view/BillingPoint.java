@@ -650,7 +650,6 @@ public class BillingPoint extends javax.swing.JFrame {
         // if (selecteditem != null) {
         // }
         // Product_Controller pc = new Product_Controller();
-
         // try {
         // DefaultTableModel model = (DefaultTableModel) tbl_browse.getModel();
         // model.setRowCount(0);
@@ -658,9 +657,6 @@ public class BillingPoint extends javax.swing.JFrame {
         // int prodPrice = Integer.parseInt(result.getString("productId"));
         // model.addRow(new Object[] { prodId, prodName, prodQty, prodPrice,
         // prodCategory });
-
-        // // handlin
-
         // }
         // } catch (final Exception ex) {
 
