@@ -649,15 +649,14 @@ public class BillingPoint extends javax.swing.JFrame {
         // // GEN-FIRST:event_formWindowOpened
         // if (selecteditem != null) {
         // }
-        // Product_Controller pc = new Product_Controller();
+        // Product_Controller pc = new Productcontroller();
         // ResultSet result = pc.fetchProduct(p1);
 
         // try {
         // DefaultTableModel model = (DefaultTableModel) tbl_browse.getModel();
         // model.setRowCount(0);
         // while (result.next()) {
-        // int prodId = Integer.parseInt(result.getString("productId"));
-        // int prodPrice = Integer.parseInt(result.getString("productPrice"));
+        // int prodPrice = Integer.parseInt(result.getString("productId"));
         // model.addRow(new Object[] { prodId, prodName, prodQty, prodPrice,
         // prodCategory });
 
