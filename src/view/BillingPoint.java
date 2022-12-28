@@ -605,10 +605,7 @@ public class BillingPoint extends javax.swing.JFrame {
                 // TODO add your handling code here:
         }// GEN-LAST:event_tfProductQtyActionPerformed
         /*
-         * 
-         * private void tfProductNameActionPerformed(java.awt.event.ActionEvent evt)
-         * {//GEN-FIRST:event_tfProductNameActionPerformed
-         * // TODO add your handling code here:
+         *
          * DefaultTableModel model= (DefaultTableModel) p\ProductTable.getModel();
          * Uprice=Integer.valueOf(model.getValueAt(Myindex,1).toString());
          * Product_Name.setText(model.getValueAt(Myindex,0).toString());
