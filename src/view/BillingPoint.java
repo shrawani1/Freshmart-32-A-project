@@ -702,8 +702,6 @@ public class BillingPoint extends javax.swing.JFrame {
 
         // }
         // } catch (final Exception ex) {
-        // ex.printStackTrace();
-        // }
 
         public void display() {
                 String category = null;
