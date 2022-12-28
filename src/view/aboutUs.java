@@ -8,7 +8,7 @@ package view;
  *
  * @author Dell5468i5
  */
-public class aboutUs extends javax.swing.JFrame {
+public class aboutUs extends javax.swing.JFrame  {
 
     /**
      * Creates new form aboutUs
