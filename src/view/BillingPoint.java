@@ -658,7 +658,7 @@ public class BillingPoint extends javax.swing.JFrame {
         // model.addRow(new Object[] { prodId, prodName, prodQty, prodPrice,
         // prodCategory });
         // }
-        // } catch (final Exception ex) {
+        // }
 
         public void display() {
                 String category = null;
