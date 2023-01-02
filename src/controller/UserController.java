@@ -2,11 +2,12 @@ package controller;
 
 import java.sql.ResultSet;
 
-import database.DbConnection;
+import database.Dbconnection;
+// import database.DBconnection;
 import models.User;
 
 public class UserController {
-    DbConnection dbConnection;
+    Dbconnection DBconnection;
 
     public int insertDetails(User user) {
         String username = user.getUsername();
@@ -16,8 +17,8 @@ public class UserController {
         String insertquery = "insert into user_table(username,password)"
                 + "values('" + username + "','" + pass + "')";
 
-        dbConnection = new DbConnection();
-        int result = dbConnection.manipulate(insertquery);
+        DBconnection = new Dbconnection();
+        int result = DBconnection.manipulate(insertquery);
         return result;
 
     }
@@ -28,8 +29,8 @@ public class UserController {
         String pass = user.getuserpass();
 
         String selectLogin = "select * from manage_seller where seller_id='" + id + "' and password='" + pass + "'";
-        dbConnection = new DbConnection();
-        ResultSet result = dbConnection.retrieve(selectLogin);
+        DBconnection = new Dbconnection();
+        ResultSet result = DBconnection.retrieve(selectLogin);
         return result;
 
     }
@@ -38,22 +39,22 @@ public class UserController {
         // String username = user.getUsername();
         int id = user.getuserId();
         String updatestatus = "update manage_seller SET status= '" + "active" + "' where seller_id='" + id + "'";
-        dbConnection = new DbConnection();
-        int result = dbConnection.manipulate(updatestatus);
+        DBconnection = new Dbconnection();
+        int result = DBconnection.manipulate(updatestatus);
         return result;
     }
 
     public int changeStatus(User user) {
         String changeStatus = "update manage_seller set status='" + "inactive" + "' where status='" + "active" + "'";
-        dbConnection = new DbConnection();
-        int result = dbConnection.manipulate(changeStatus);
+        DBconnection = new Dbconnection();
+        int result = DBconnection.manipulate(changeStatus);
         return result;
     }
 
     public ResultSet selectdetails(User user) {
         String selectdetails = "select * from manage_seller where status='" + "active" + "'";
-        dbConnection = new DbConnection();
-        ResultSet result = dbConnection.retrieve(selectdetails);
+        DBconnection = new Dbconnection();
+        ResultSet result = DBconnection.retrieve(selectdetails);
         return result;
     }
 

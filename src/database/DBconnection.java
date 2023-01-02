@@ -4,7 +4,7 @@ import javax.swing.*;
 
 import java.sql.*;
 
-public class DbConnection {
+public class Dbconnection {
 
     public Connection connection;
 
@@ -14,14 +14,11 @@ public class DbConnection {
 
     int value;
 
-    public DbConnection() {
+    public Dbconnection() {
 
         try {
 
-          
-             String username = "freshmart1";
-
-      
+            String username = "freshmart1";
             String password = "Freshmart1";
 
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -94,7 +91,7 @@ public class DbConnection {
 
     public static void main(String[] args) {
 
-        new DbConnection();
+        new Dbconnection();
 
     }
 
